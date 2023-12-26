@@ -10,6 +10,14 @@ By leveraging the interactive nature of Jupyter notebooks, the repository enable
 ## Development Notebooks Section
 This section encompasses a series of notebooks dedicated to time-dependent experiments. The primary focus of these experiments is to develop a Regression-like model that maintains its explainability. For this purpose, a methodology centered around lagged variable time series was employed. The Darts library was selected for its native support of Optuna and Darts, along with compatibility with most sklearn regression models.
 
+1. Adjusted vs raw.
+2. Time lags monthly aggregation.
+3. Absence of lags. Daily vs weekly training.
+4. Aggregated model vs individual model. Simulation issue.
+![Model Comparison with real 2023 data](model_comparison.png)
+
+
+
 ## Production Notebooks Section
 The distilled essence of the research conducted in the Development Notebooks is presented here, divided into three distinct stages:
 
