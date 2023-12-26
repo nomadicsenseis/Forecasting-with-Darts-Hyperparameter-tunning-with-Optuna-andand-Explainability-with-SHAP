@@ -14,7 +14,7 @@ This section encompasses a series of notebooks dedicated to time-dependent exper
 2. Time lags monthly aggregation.
 3. Absence of lags. Daily vs weekly training.
 4. Aggregated model vs individual model. Simulation issue.
-![Model Comparison with real 2023 data](NPS forecasting model/nps_model/model_comparison.png)
+![Model Comparison with real 2023 data](model_comparison.png)
 
 
 
