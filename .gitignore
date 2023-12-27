@@ -2,5 +2,5 @@
 */
 !*.ipynb
 !README.md
-!readmi_images/
-!readmi_images/**/*
+!readme_images/
+!readme_images/**/*
