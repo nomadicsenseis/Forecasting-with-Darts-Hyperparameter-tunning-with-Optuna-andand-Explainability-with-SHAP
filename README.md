@@ -32,25 +32,25 @@ The model and its associated components, including scalers, dataframes, and more
 
 ## Development Notebooks Section
 This section encompasses a series of notebooks dedicated to time-dependent experiments. The primary focus of these experiments is to develop a Regression-like model that maintains its explainability. For this purpose, a methodology centered around lagged variable time series was employed. The Darts library was selected for its native support of Optuna and Darts, along with compatibility with most sklearn regression models.
-![Project evolution](project_evolution.png)
+![Project evolution](readme_images/project_evolution.png)
 
 1. Adjusted vs raw. 
 The performance comparison between using raw NPS data and weighted (and adjusted) data showed similar results. However, in terms of Economy cabins, which hold significant weight in the overall percentages, there was better performance observed with the adjusted data. Regarding the model trained with daily aggregated data, this experiment has not been conducted yet and should be considered in future iterations.
 
 RAW monthly forecasts:
-![Monthly forecast RAW NPS plot](NPS_raw_forecast.png)
-![Monthly forecast RAW NPS mae](NPS_raw_mae.png)
+![Monthly forecast RAW NPS plot](readme_images/NPS_raw_forecast.png)
+![Monthly forecast RAW NPS mae](readme_images/NPS_raw_mae.png)
 Ajusted monthly forecasts:
-![Monthly forecast adjusted NPS plot](NPS_adjusted_forecast.png)
-![Monthly forecast adjusted NPS mae](NPS_adjusted_mae.png)
+![Monthly forecast adjusted NPS plot](readme_images/NPS_adjusted_forecast.png)
+![Monthly forecast adjusted NPS mae](readme_images/NPS_adjusted_mae.png)
 
 2. Time lags monthly aggregation. 
 In the previous plots, it was ploted that forecasts extended six months into the future. To enhance model generalization, backtests for each model variant were conducted.
 
-![Monthly backtest adjusted NPS](NPS_adjusted_backtest.png)
+![Monthly backtest adjusted NPS](readme_images/NPS_adjusted_backtest.png)
 
 Despite tuning efforts, including the use of Optuna, the performance of the models remained suboptimal, particularly for less populated cabin categories. A notable challenge encountered was in the realm of explainability. Due to high correlation among variables at this level of aggregation, SHAP values did not align with expectations.
-![Correlation comparison](correlation_comparison.png)
+![Correlation comparison](readme_images/correlation_comparison.png)
 
 3. Absence of lags. Daily vs weekly training. Monotonic constraints.
 
@@ -60,4 +60,4 @@ Despite tuning efforts, including the use of Optuna, the performance of the mode
 
 
 4. Aggregated model vs individual model. Simulation issue.
-![Model Comparison with real 2023 data](model_comparison.png)
+![Model Comparison with real 2023 data](readme_images/model_comparison.png)
