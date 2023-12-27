@@ -1,5 +1,6 @@
 *
-!*/
+*/
 !*.ipynb
 !README.md
-!model_comparison.png
+!readme_images/
+!readme_images/**/*
