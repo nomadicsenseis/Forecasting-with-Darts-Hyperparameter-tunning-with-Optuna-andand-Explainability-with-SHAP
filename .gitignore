@@ -1,14 +1,4 @@
 *
-!*/
-!*.ipynb
-!README.md
-!model_comparison.png
-!readmi_folder/
-!readmi_folder/**/*
-*
-*/
-*/ >> .gitignore.ipynb
-*
 */
 !*.ipynb
 !README.md
