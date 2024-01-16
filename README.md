@@ -7,6 +7,8 @@ From preprocessing raw data to applying sophisticated predictive models, and fro
 By leveraging the interactive nature of Jupyter notebooks, the repository enables a dynamic environment where stakeholders can observe the effects of different parameters in real-time, thereby fostering an informed and data-driven culture within the organization. This repository is the cornerstone of a robust analytics platform that empowers Iberia to harness the full potential of NPS metrics, ensuring that customer feedback translates into meaningful action and sustained improvement.
 
 ## Production Notebooks Section
+![Production Schema](readme_images/Esquema NPS Reforecast.png)
+
 The distilled essence of the research conducted in the Development Notebooks is presented here, divided into three distinct stages:
 
 1. Read and Aggregation Notebooks
