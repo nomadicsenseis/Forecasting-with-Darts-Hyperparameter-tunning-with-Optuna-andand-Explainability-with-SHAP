@@ -24,12 +24,16 @@ An additional "eda" notebook is included, where the time dependencies of the var
 2. Targets Estimation Notebooks
 Currently, this stage contains a single "Targets" notebook. This notebook was instrumental in manually estimating the targets for the upcoming year (2024). It draws data from the monthly and yearly adjustments and generates the final dataframe for model predictions and SHAP value comparisons.
 
+a. Inputs: The main inputs are the monthly and yearly aggregated dataframes from the notebooks in (1). But it additionaly allow for manual input of some auxiliary dataframes. i) For using the days of a non-fisinished months, where the weighted NPS is not available yet, it allows the uploading of these values, extracted directly from the dashboard, and concatenates them to the main dataframe. ii) It also makes use of an current_initiatives_correction.xlsx file with the information up until which month of the next year the corrections implemented on the H2 of the current year apply. iii) Since at the moment of prediction our load_factor did not match the one of the dashboard (almost but not exactly), the notebook also feeds on a load_factor.xlsx extracted from the dashboard. 
+b. Outputs: It ouputs 4 pairs of notebooks, each pair corresponding to a different scenario and each element correspoinding to a different aggregation: monthly or yearly. In order: i) operative_performance_corrected_(targets/annual_targets), unexpected_events_corrected_(targets/annual_targets), current_customer_initiatives_corrected_(targets/annual_targets) and next_year_customer_initiatives_corrected_(targets/annual_targets).
+
 3. Aggregated Model Notebooks
 This final stage consists of two notebooks:
 
 a. Retraining Notebook: Utilizes daily aggregated data for model retraining.
 b. Prediction Notebook: Employs the trained model and target outputs for making predictions.
 The model and its associated components, including scalers, dataframes, and more, are stored within the OPTUNA_EXP directory, specifically in All_var_all_tp_best_models. The All_var_all_tp directory contains various reports and graphics related to each cabin/haul.
+c. Reforecast Notebook: Makes use of the dataframes for each scenerario ouputed by the targets notebook (at the time and date where the targets were given), the monthly aggregated values up untill the moment of the reforecast, and the models ouputed by the retraining (either the models used for the targets or new ones trained with date up until the reforecast date). This notebook aims to compare the prediction of the models for the real satisfactions with the ones forecasted with the targets, and give an explanation to this difference using SHAPs.
 
 
 ## Development Notebooks Section
